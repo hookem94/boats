@@ -38,10 +38,9 @@ sed -i "s/OTX_KEY = ''/OTX_KEY = '$AV_OTX_API_KEY'/" /scripts/otx-iocs/get-otx-i
 sed -i "s/API_KEY = '-'/API_KEY = '$VT_PUBLIC_API_KEY'/" /scripts/Loki/tools/vt-checker.py
 sed -i "s/API_KEY = '-'/API_KEY = '$VT_PUBLIC_API_KEY'/" /scripts/Loki/tools/vt-checker-hosts.py
 
-
 echo ""
 echo "----------------------------------------------------------------------------------------"
-echo "Updating Loki
+echo "Updating Loki"
 echo "----------------------------------------------------------------------------------------"
 echo ""
 cd /scripts/Loki && python /scripts/Loki/loki.py --update
