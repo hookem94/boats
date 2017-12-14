@@ -43,8 +43,8 @@ RUN apt-get -qq update  && \
     links \
     lynx \
     libcurl4-gnutls-dev \
-    librtmp-dev
-
+    librtmp-dev \
+    tree
 
 #RUN DEBIAN_FRONTEND=noninteractive apt-get install -yq wireshark tshark
 RUN pip install -U pip
@@ -108,8 +108,9 @@ WORKDIR /scripts/python-evtx
 RUN python setup.py install
 WORKDIR /scripts/shellbags
 RUN python setup.py install
+WORKDIR /scripts/Loki
+RUN python loki.py --update
 WORKDIR /scripts
-#python /scripts/Loki/loki.py --updateRUN python /scripts/Loki/loki.py --update
 RUN echo will cite | parallel --bibtex
 COPY replace.txt /scripts/SSMA/replace.txt
 COPY API_updates.sh /scripts/API_updates.sh
