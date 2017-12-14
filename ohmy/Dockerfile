@@ -9,25 +9,25 @@ WORKDIR /scripts
 
 RUN apt-get -qq update  && \
     apt-get install -yq  git \
-	net-tools \
+    net-tools \
     python \
-	python-dev \
+    python-dev \
     python-pip \
     python-yara \
     python3 \
-	python-setuptools \
+    python-setuptools \
     libboost-python-dev \
     libboost-all-dev \
-	build-essential \
-	libxml2-dev \
+    build-essential \
+    libxml2-dev \
     libxslt-dev \
-	libtool \
+    libtool \
     automake \
-	libffi-dev \
+    libffi-dev \
     libfuzzy-dev \
     libjpeg-dev \
     pkg-config \
-	autoconf \
+    autoconf \
     vim \
     nano \
     yara \
@@ -42,8 +42,8 @@ RUN apt-get -qq update  && \
     p7zip-full \
     links \
     lynx \
-	libcurl4-gnutls-dev \
-	librtmp-dev
+    libcurl4-gnutls-dev \
+    librtmp-dev
 
 
 #RUN DEBIAN_FRONTEND=noninteractive apt-get install -yq wireshark tshark
@@ -74,9 +74,10 @@ RUN pip install pefile \
     argparse \
     six \
     python-registry \
-	scandir \
-	IPy \
-	pycurl
+    scandir \
+    IPy \
+    pycurl \
+    pycrypto
 
 RUN pip3 install -U pip
 RUN pip3 install pefile \
